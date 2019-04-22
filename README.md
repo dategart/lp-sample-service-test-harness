@@ -6,8 +6,11 @@ The tests don't do anything at present but ultimately they would run tests again
 
 Note that all integration tests live under the com.autodesk.lp.sample.it package. Although cucumber tests are best called "acceptance tests", as the Maven plugin failsafe uses the term integration throughout, that's what is used here.
 
+The feature files live at: src\test\resources\features\*. They are only examples ... some may not even make sense. But they should demonstrate the basic idea: simple statements of the applications requirements which connect to actually testing code (i.e. CucumberRunnerIT, HumsValidationStepDefinitions and HumsSomeGroupOfRequirementsStepDefinitions)
+
 The class LpITHarnessPostgresqlContainer provides a single TestContainer Postgres database for all tests. A similar TestContainer RabbitMQ can be provided, something which I'll do later.
 
+TODO: create a TestContainer RabbitMQ, publish/consume simple messages and run asserts against them.
 
 ## Some commands
 
